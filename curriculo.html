@@ -5,12 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Currículo - Enzo Maciel D'Epiro</title>
   <style>
-    body{font-family:Arial, sans-serif; background:#f4f4f4; margin:0; padding:20px;}
-    .cv{max-width:700px; margin:auto; background:#fff; padding:20px; border-radius:8px;}
-    h1{margin:0; font-size:24px;}
-    h2{margin-top:20px; font-size:18px;}
-    p{margin:4px 0;}
-    ul{padding-left:20px;}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .cv {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1 { margin: 0; font-size: 24px; color: #333; }
+    h2 { margin-top: 20px; font-size: 18px; color: #444; }
+    p { margin: 4px 0; }
+    ul { padding-left: 20px; }
+    button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #projetos { display: none; }
   </style>
 </head>
 <body>
@@ -36,7 +60,8 @@
     </ul>
 
     <h2>Projetos</h2>
-    <ul>
+    <button onclick="toggleProjetos()">Mostrar/Esconder Projetos</button>
+    <ul id="projetos">
       <li>Site simples de portfólio</li>
       <li>Aplicativo de lista de tarefas</li>
     </ul>
@@ -44,5 +69,16 @@
     <h2>Contato</h2>
     <p>Disponível para estágio e oportunidades de desenvolvedor iniciante.</p>
   </div>
+
+  <script>
+    function toggleProjetos() {
+      const lista = document.getElementById('projetos');
+      if (lista.style.display === 'none') {
+        lista.style.display = 'block';
+      } else {
+        lista.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
